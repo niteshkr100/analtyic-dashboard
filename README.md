@@ -33,8 +33,7 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
 
    ```bash
    git clone https://github.com/your-username/team-pulse-dashboard.git
-   ```
-    ```bash
+   
    cd team-pulse-dashboard
    ```
 #### 2. **Install dependencies:**

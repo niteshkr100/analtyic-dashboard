@@ -44,7 +44,7 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
     npm install
  
  
-#### 1. **Run the repository:**
+#### 3. **Run the repository:**
 
    ```bash
     npm run dev

@@ -14,6 +14,7 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
 - Dark mode toggle for accessibility.
 - Automatic status reset to "Offline" after 10 minutes of inactivity.
 - uses localstorages to maintain data
+- mobile friendly(responsive design)
 
 ---
 
@@ -23,9 +24,10 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
   React Router DOM  
   Tailwind CSS     
   Lucide React     
-  Recharts         
+  Recharts  
+  vite       
   randomuser.me API
-  vite
+  
 
 ##  Setup Instructions
 

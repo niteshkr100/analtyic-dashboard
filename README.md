@@ -34,7 +34,7 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
 #### 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/niteshkr100/team-pulse-dashboard.git
+   git clone https://github.com/niteshkr100/analtyic-dashboard.git
 
    cd team-pulse-dashboard
    ```
@@ -49,17 +49,7 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
    ```bash
     npm run dev
    ```
-
-##  Screenshot
- ![image1](./screenshot/Screenshot%202025-07-03%20at%204.01.17 PM.png)
- ![image2](./screenshot/Screenshot%202025-07-03%20at%204.01.44 PM.png)
- ![image3](./screenshot/Screenshot%202025-07-03%20at%204.01.52 PM.png)
- ![image4](./screenshot/Screenshot%202025-07-03%20at%204.02.28 PM.png)
- ![image5](./screenshot/Screenshot%202025-07-03%20at%204.02.38 PM.png)
- ![image6](./screenshot/Screenshot%202025-07-03%20at%204.02.47 PM.png)
- ![image7](./screenshot/Screenshot%202025-07-03%20at%204.02.57 PM.png)
- ![image8](./screenshot/Screenshot%202025-07-03%20at%204.03.16 PM.png)
- ![image9](./screenshot/Screenshot%202025-07-03%20at%204.13.06 PM.png)
+ 
    
 
  

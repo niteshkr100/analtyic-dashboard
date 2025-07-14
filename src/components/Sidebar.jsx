@@ -2,9 +2,7 @@ import {
  
   LayoutDashboard,
   AppWindow,
- 
   Palette,
- 
   CircleGauge,
   Search,
   Zap,
@@ -15,9 +13,7 @@ import {
  
 import { NavLink } from 'react-router-dom';
  
- 
- 
- 
+
 //sidebar data 
 const navItems = [
   { icon: <CircleGauge size={22} />, label: 'Dashboard', to: '/' },

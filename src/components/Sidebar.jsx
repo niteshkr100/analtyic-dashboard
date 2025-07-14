@@ -68,7 +68,7 @@ const Sidebar = ({  closeSidebar = () => {}, isDark, handleDark }) => {
       </div>
 
       {/* Footer */}
-      <div className="space-y-3 mt-6 border-t border-blue-600 pt-4 text-sm">
+      <div className="space-y-3 mt-6 border-t border-white-600 pt-4 text-sm">
         <div className="flex items-center gap-2">
           <input
             type="checkbox"

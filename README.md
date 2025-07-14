@@ -1,18 +1,18 @@
- ## Team Pulse Dashboard
-Dashboard with Role-Based Views (Redux Toolkit Implementation)
-
+ ## Analytic Dashboard
+Dashboard with metrics card  
+ 
 
 ## Project Overview
 
 **Analytic Dashboard** enables:
-- Team Leads to assign tasks and monitor progress.
-- Team Members to update status: `Working`, `Break`, `Meeting`, or `Offline`.
-- Real-time charts for team insights:
-  - Status distribution (Pie chart)
-  - Active tasks per member (Bar chart)
+- Total Summary section with metric cards
+- Trends Chart for activity visualization
+- Geo Map for storefront performancex
+- Top List showing top performing keywords
+- Biggest Change component showing % increase/decrease
 - Sidebar navigation for scalability.
 - Dark mode toggle for accessibility.
-- Automatic status reset to "Offline" after 10 minutes of inactivity.
+- Topbar Tabs for switching between sections like Accounts, Apps, Keywords, etc
 - uses localstorages to maintain data
 - mobile friendly(responsive design)
 

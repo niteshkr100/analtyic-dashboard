@@ -64,17 +64,30 @@ const Sidebar = ({  closeSidebar = () => {}, isDark, handleDark }) => {
       </div>
 
       {/* Footer */}
-      <div className="space-y-3 mt-6 border-t border-white-600 pt-4 text-sm">
-        <div className="flex items-center gap-2">
-          <input
-            type="checkbox"
-            className="toggle-checkbox"
-            checked={isDark}
-            onChange={handleDark}
-          />
-          <label className="cursor-pointer">{isDark ? 'Dark!' : 'white!'}</label>
-        </div>
-      </div>
+ 
+  <div className="space-y-2 mt-6 border-t border-white/60 pt-4 text-sm">
+  <div className="flex flex-col items-start gap-1">
+  
+    <span className="text-white font-medium">
+      {isDark ? 'Dark' : 'Light'}
+    </span>
+
+ 
+    <button
+      onClick={handleDark}
+      className={`w-10 h-5 flex items-center rounded-full p-1 transition-colors duration-300 ${
+        isDark ? 'bg-orange-900' : 'bg-gray-300'
+      }`}
+    >
+      <div
+        className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-300 ${
+          isDark ? 'translate-x-5' : 'translate-x-0'
+        }`}
+      />
+    </button>
+  </div>
+</div>
+
     </aside>
   );
 };

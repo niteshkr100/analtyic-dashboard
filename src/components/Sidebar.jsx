@@ -1,46 +1,50 @@
 import {
-  Home,
-  Briefcase,
-  Ticket,
-  Users,
-  Calculator,
+ 
   LayoutDashboard,
   AppWindow,
-  Code,
+ 
   Palette,
-  CalendarCheck,
+ 
+  CircleGauge,
+  Search,
+  Zap,
+  Image
+ 
 } from 'lucide-react';
-import { useSelector } from 'react-redux';
+ 
 import { NavLink } from 'react-router-dom';
+ 
 
+ 
+ 
 //sidebar data 
 const navItems = [
-  { icon: <Home size={18} />, label: 'Dashboard', to: '/' },
-  { icon: <Briefcase size={18} />, label: 'Projects', to: '/projects' },
-  { icon: <Ticket size={18} />, label: 'Tickets', to: '/tickets' },
-  { icon: <Users size={18} />, label: 'Our Clients', to: '/clients' },
-  { icon: <LayoutDashboard size={18} />, label: 'Employees', to: '/employees' },
-  { icon: <Calculator size={18} />, label: 'Accounts', to: '/accounts' },
-  { icon: <Users size={18} />, label: 'Payroll', to: '/payroll' },
-  { icon: <AppWindow size={18} />, label: 'Space', to: '/space' },
-  { icon: <Code size={18} />, label: 'Other Pages', to: '/other' },
-  { icon: <Palette size={18} />, label: 'UI Components', to: '/ui' },
+  { icon: <CircleGauge size={22} />, label: 'Dashboard', to: '/' },
+  { icon: <LayoutDashboard size={22} />, label: 'Projects', to: '/projects' },
+ 
+  { icon: <Image size={22} />, label: 'Our Clients', to: '/clients' },
+  { icon: <LayoutDashboard size={22} />, label: 'Employees', to: '/employees' },
+ 
+  { icon: <Search size={22} />, label: 'Payroll', to: '/payroll' },
+  { icon: <AppWindow size={22} />, label: 'Space', to: '/space' },
+  { icon: <Zap  size={22} />, label: 'Other Pages', to: '/other' },
+  { icon: <Palette size={22} />, label: 'UI Components', to: '/ui' },
 ];
 
 const Sidebar = ({  closeSidebar = () => {}, isDark, handleDark }) => {
-//   const { currentRole, currentUser } = useSelector((state) => state.role);
+ 
 
   return (
-    <aside className="relative h-full p-4 bg-blue-700 dark:bg-blue-900 text-white flex flex-col justify-between">
+    <aside className="relative h-full p-4 bg-orange-500 dark:bg-orange-600 text-white flex flex-col justify-between">
         <div className='block md:hidden absolute right-4 text-xl font-extrabold' onClick={closeSidebar} >X</div>
       <div>
         {/* Logo */}
-        <div className="text-center font-bold text-2xl mb-8 mt-4">
-          <div className="flex items-center justify-start gap-2">
-            <span className="text-3xl"><CalendarCheck /></span>
-            <span>My-Task</span>
-          </div>
-        </div>
+        <div className="flex justify-center items-center mb-6 mt-12">
+        <div className="w-8 h-8 bg-white text-blue-700 rounded-full flex items-center justify-center font-bold text-xl">
+   
+    </div>
+</div>
+
 
         {/* Navigation */}
         <nav className="space-y-2">
@@ -51,13 +55,13 @@ const Sidebar = ({  closeSidebar = () => {}, isDark, handleDark }) => {
               className={({ isActive }) =>
                 `flex items-center gap-3 px-3 py-2 rounded cursor-pointer ${
                   isActive
-                    ? 'bg-blue-300 text-black font-semibold'
+                    ? 'bg-blue-50 text-black font-semibold'
                     : 'hover:bg-blue-200 hover:text-black'
                 }`
               }
             >
               {icon}
-              <span>{label}</span>
+              {/* <span>{label}</span> */}
             </NavLink>
           ))}
         </nav>
@@ -72,7 +76,7 @@ const Sidebar = ({  closeSidebar = () => {}, isDark, handleDark }) => {
             checked={isDark}
             onChange={handleDark}
           />
-          <label className="cursor-pointer">Switch to {isDark ? 'Light Mode!' : 'Dark Mode!'}</label>
+          <label className="cursor-pointer">{isDark ? 'Dark!' : 'white!'}</label>
         </div>
       </div>
     </aside>

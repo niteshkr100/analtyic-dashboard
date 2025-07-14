@@ -1,0 +1,15 @@
+{
+  "daily": [
+    { "date": "2025-07-01", "spend": 200 },
+    { "date": "2025-07-02", "spend": 320 },
+    { "date": "2025-07-03", "spend": 180 }
+  ],
+  "weekly": [
+    { "date": "Week 1", "spend": 1200 },
+    { "date": "Week 2", "spend": 1450 }
+  ],
+  "monthly": [
+    { "date": "June", "spend": 5200 },
+    { "date": "July", "spend": 6300 }
+  ]
+}

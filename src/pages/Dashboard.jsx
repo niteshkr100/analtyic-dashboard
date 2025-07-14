@@ -1,96 +1,50 @@
-import { useSelector } from 'react-redux';
-import { useState } from 'react';
-import TaskForm from '../components/TaskForm';
-import MemberCard from '../components/MemberCard';
-import StatusSelector from '../components/StatusSelector';
-import TaskList from '../components/TaskList';
-import VisualBoard from '../components/VisualBoard';
+import summaryData from '../data/summary.json';
+import MetricCard from '../components/MetricCard';
+import GeoMap from '../components/charts/GeoMap';
+import TrendsChart from '../components/charts/TrendsChart'; 
 
 const Dashboard = () => {
-  const [filterStatus, setFilterStatus] = useState('');
-  const [sortByTasks, setSortByTasks] = useState(false);
-
-  const { currentRole, currentUser } = useSelector((state) => state.role);
-  const members = useSelector((state) => state.members.list);
-
-  const currentMember = members.find((m) => m.name === currentUser);
-
-  const filteredMembers = members
-    .filter((m) => (filterStatus ? m.status === filterStatus : true))
-    .sort((a, b) => {
-      if (!sortByTasks) return 0;
-      const aTasks = a.tasks?.filter((t) => t.progress < 100).length || 0;
-      const bTasks = b.tasks?.filter((t) => t.progress < 100).length || 0;
-      return bTasks - aTasks;
-    });
-
-  const statusCounts = members.reduce((acc, member) => {
-    acc[member.status] = (acc[member.status] || 0) + 1;
-    return acc;
-  }, {});
-
   return (
-    <div className=" p-6 space-y-6">
-      {currentRole === 'lead' ? (
-        <>
-          {/* Summary */}
-          <div className="flex flex-wrap gap-4 dark:text-black">
-            {Object.entries(statusCounts).map(([status, count]) => (
-              <div key={status} className="bg-white shadow rounded p-4 dark:bg-blue-300 ">
-                <p className="text-gray-500 capitalize dark:text-black">{status}</p>
-                <p className="text-xl font-bold">{count}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Filter + Sort Controls */}
-          <div className="flex flex-wrap items-center gap-4 dark:text-white">
-            <select
-              value={filterStatus}
-              onChange={(e) => setFilterStatus(e.target.value)}
-              className="border p-2 rounded"
+    <div className="p-6 space-y-10">
+      {/* 🔹 Total Summary */}
+      <section className='pl-0 md:pl-6'>
+        <h1 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+          Total Summary
+        </h1>
+        <div className="flex flex-wrap gap-4">
+          {summaryData.map((item, i) => (
+            <div
+              key={i}
+              className="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 xl:w-1/6"
             >
-              <option value="">All Statuses</option>
-              <option value="Working">Working</option>
-              <option value="Break">Break</option>
-              <option value="Meeting">Meeting</option>
-              <option value="Offline">Offline</option>
-            </select>
+              <MetricCard {...item} />
+            </div>
+          ))}
+        </div>
+      </section>
 
-            <label className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                checked={sortByTasks}
-                onChange={(e) => setSortByTasks(e.target.checked)}
-              />
-              Sort by Active Tasks
-            </label>
-          </div>
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+  {/* Storefront (GeoMap) */}
+  <div className="dark:bg-gray-800 p-6 rounded-xl h-full min-h-[400px] flex flex-col">
+    <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+      Storefront
+    </h2>
+    <GeoMap />
+  </div>
 
-          {/* Task Form */}
-          <TaskForm />
+  {/* Trends */}
+  <div className="dark:bg-gray-800 p-6 rounded-xl h-full min-h-[400px] flex flex-col">
+  <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">
+    Trends
+  </h2>
+  <div className="bg-white border border-gray-200 dark:bg-orange-800 p-4 rounded-xl shadow w-full flex-1 flex items-center justify-center">
+    
+    <TrendsChart />
+  </div>
+</div>
 
-          {/* Member Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredMembers.map((member) => (
-              <MemberCard key={member.id} member={member} />
-            ))}
-          </div>
-        </>
-      ) : (
-        <>
-            {/* Show only when a member is selected */}
-            {currentUser && currentMember ? (
-            <>
-                <StatusSelector user={currentUser} />
-                <TaskList tasks={currentMember.tasks} userId={currentMember.id} />
-            </>
-            ) : (
-           <VisualBoard/>
-            )}
+</section>
 
-        </>
-      )}
     </div>
   );
 };

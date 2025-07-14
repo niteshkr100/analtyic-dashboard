@@ -5,7 +5,7 @@ import TrendsChart from '../components/charts/TrendsChart';
 import TopList from '../components/charts/TopList';
 import BiggestChange from '../components/charts/BiggestChange';
 
-// Sample static data
+//sample data
 const topApps = [
   { name: 'Discovery', value: '$ 1,20,000' },
   { name: 'Branding', value: '$ 98,500' },
@@ -39,7 +39,7 @@ const Dashboard = () => {
         </div>
       </section>
 
-      {/* 🔹 Storefront & Trends */}
+ 
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Storefront */}
         <div className="dark:bg-gray-800 p-6 rounded-xl h-full min-h-[400px] flex flex-col">

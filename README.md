@@ -4,7 +4,7 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
 
 ## Project Overview
 
-**Team Pulse Dashboard** enables:
+**Analytic Dashboard** enables:
 - Team Leads to assign tasks and monitor progress.
 - Team Members to update status: `Working`, `Break`, `Meeting`, or `Offline`.
 - Real-time charts for team insights:

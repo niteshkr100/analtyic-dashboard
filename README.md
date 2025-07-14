@@ -37,7 +37,7 @@ Dashboard with metrics card
    ```bash
    git clone https://github.com/niteshkr100/analtyic-dashboard.git
 
-   cd team-pulse-dashboard
+   cd analytic-dashboard
    ```
 #### 2. **Install dependencies:**
  

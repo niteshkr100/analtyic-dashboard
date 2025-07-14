@@ -51,5 +51,8 @@ Dashboard with Role-Based Views (Redux Toolkit Implementation)
    ```
  
    
-
+##  Screenshot
+ ![image1](./public/Screenshot%202025-07-14%20at%204.53.41 PM.png)
+ ![image2](./public/Screenshot%202025-07-14%20at%204.53.57 PM.png)
+ ![image3](./public/Screenshot%202025-07-14%20at%204.54.13 PM.png)
  

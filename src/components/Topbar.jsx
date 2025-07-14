@@ -12,7 +12,7 @@ const tabs = [
 
 const Topbar = () => {
   return (
-    <div className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-sm border-b border-gray-200">
+    <div className="sticky top-0 z-50 bg-gray-100 dark:bg-gray-900 shadow-sm border-b border-gray-200">
       <div className="flex items-center px-4 py-2 overflow-x-auto gap-4 text-sm font-medium">
         {tabs.map((tab) => (
           <NavLink
@@ -21,7 +21,7 @@ const Topbar = () => {
             className={({ isActive }) =>
               `px-4 py-1 rounded-full transition-all ${
                 isActive
-                  ? 'bg-primary text-white shadow'
+                  ? 'bg-orange-500 text-white shadow'
                   : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
               }`
             }

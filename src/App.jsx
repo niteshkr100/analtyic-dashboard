@@ -62,7 +62,7 @@ function App() {
       <div className="flex-1 flex flex-col md:ml-20 dark:bg-primary-dark dark:text-white">
         {/* Header + Topbar */}
         <div className="fixed top-0 left-0 md:left-20 right-0 z-30 bg-white dark:bg-gray-900 shadow">
-          <div className="h-16">
+          <div className="h-20">
             <Header openSidebar={() => setSidebarOpen(true)} />
           </div>
           <Topbar />

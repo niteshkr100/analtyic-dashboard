@@ -21,10 +21,8 @@ import { NavLink } from 'react-router-dom';
 const navItems = [
   { icon: <CircleGauge size={22} />, label: 'Dashboard', to: '/' },
   { icon: <LayoutDashboard size={22} />, label: 'Projects', to: '/projects' },
- 
   { icon: <Image size={22} />, label: 'Our Clients', to: '/clients' },
   { icon: <LayoutDashboard size={22} />, label: 'Employees', to: '/employees' },
- 
   { icon: <Search size={22} />, label: 'Payroll', to: '/payroll' },
   { icon: <AppWindow size={22} />, label: 'Space', to: '/space' },
   { icon: <Zap  size={22} />, label: 'Other Pages', to: '/other' },
